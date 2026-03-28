@@ -11,8 +11,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",
-    "lint": "biome lint",
-    "check": "biome check"
+    "check": "pnpm lint && pnpm typecheck",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
