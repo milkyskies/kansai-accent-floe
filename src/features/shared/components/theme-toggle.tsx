@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { SunIcon } from "#/features/shared/icons/sun-icon";
+import { MoonIcon } from "#/features/shared/icons/moon-icon";
+import { MonitorIcon } from "#/features/shared/icons/monitor-icon";
 
 type ThemeMode = "light" | "dark" | "auto";
 
@@ -64,8 +67,10 @@ export function ThemeToggle() {
 
 	const label =
 		mode === "auto"
-			? "Theme mode: auto (system). Click to switch to light mode."
-			: `Theme mode: ${mode}. Click to switch mode.`;
+			? "テーマ: 自動"
+			: mode === "dark"
+				? "テーマ: ダーク"
+				: "テーマ: ライト";
 
 	return (
 		<button
@@ -73,9 +78,15 @@ export function ThemeToggle() {
 			onClick={toggleMode}
 			aria-label={label}
 			title={label}
-			className="rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-3 py-1.5 text-sm font-semibold text-[var(--sea-ink)] shadow-[0_8px_22px_rgba(30,90,72,0.08)] transition hover:-translate-y-0.5"
+			className="rounded-lg p-2 text-[var(--text-soft)] transition hover:bg-[var(--input-bg)] hover:text-[var(--text)]"
 		>
-			{mode === "auto" ? "Auto" : mode === "dark" ? "Dark" : "Light"}
+			{mode === "auto" ? (
+				<MonitorIcon size={18} />
+			) : mode === "dark" ? (
+				<MoonIcon size={18} />
+			) : (
+				<SunIcon size={18} />
+			)}
 		</button>
 	);
 }
