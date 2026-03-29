@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { SunIcon } from "#/features/shared/icons/sun-icon";
-import { MoonIcon } from "#/features/shared/icons/moon-icon";
 import { MonitorIcon } from "#/features/shared/icons/monitor-icon";
+import { MoonIcon } from "#/features/shared/icons/moon-icon";
+import { SunIcon } from "#/features/shared/icons/sun-icon";
 
 type ThemeMode = "light" | "dark" | "auto";
 

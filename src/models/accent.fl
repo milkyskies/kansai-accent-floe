@@ -1,0 +1,21 @@
+import { AccentRow } from "../services/supabase/row-dto"
+
+export type Accent {
+    id: number,
+    accent: string,
+    usage: string,
+    order: number,
+    entryId: number,
+}
+
+for AccentRow {
+  export fn toModel(self) -> Accent {
+    Accent(
+        id: self.id,
+        accent: self.accent,
+        usage: self.usage,
+        order: self.order,
+        entryId: self.entry_id,
+    )
+  }
+}

@@ -1,0 +1,25 @@
+import { Accent, for AccentRow } from "./accent"
+import { EntryRow } from "../services/supabase/row-dto"
+import { AccentRow } from "../services/supabase/row-dto"
+
+export type Entry {
+    id: number,
+    word: string,
+    reading: Option<string>,
+    reference: string,
+    accents: Array<Accent>,
+}
+
+for EntryRow {
+    export fn toModel(self, accentRows: Array<AccentRow>) -> Entry {
+        const accents = accentRows |> map((a) => a |> AccentRow.toModel)
+
+        Entry(
+            id: self.id,
+            word: self.word,
+            reading: self.reading,
+            reference: self.reference,
+            accents: accents,
+        )
+    }
+}

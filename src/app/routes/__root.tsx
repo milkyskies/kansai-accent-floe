@@ -1,10 +1,10 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { AuthProvider } from "#/features/shared/providers/auth-provider";
-import { QueryProvider } from "#/features/shared/providers/query-provider";
-import { Header } from "#/features/shared/components/header";
-import { Footer } from "#/features/shared/components/footer";
+import { Footer } from "#/features/shared/components/footer.fl";
+import { Header } from "#/features/shared/components/header.fl";
+import { AuthProvider } from "#/features/shared/providers/auth-provider.fl";
+import { QueryProvider } from "#/features/shared/providers/query-provider.fl";
 
 import "../../styles.css";
 

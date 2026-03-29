@@ -1,0 +1,9 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import trusted { useState, ReactNode } from "react"
+
+export fn QueryProvider(props: { children: ReactNode }) -> JSX.Element {
+    const [queryClient] = useState(() => QueryClient())
+
+    <QueryClientProvider client={queryClient}>{props.children}</QueryClientProvider>
+}
+
