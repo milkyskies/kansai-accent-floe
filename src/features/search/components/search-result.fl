@@ -4,7 +4,7 @@ import { Entry } from "#/models/entry.fl"
 type SearchResultProps {
     entry: Entry,
     editable: Option<boolean>,
-    onEdit: Option<() => ()>,
+    onEdit: Option<() -> ()>,
 }
 
 export fn SearchResult(props: SearchResultProps) -> JSX.Element {

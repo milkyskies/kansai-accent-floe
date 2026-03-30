@@ -55,8 +55,8 @@ importers:
         specifier: 2.4.5
         version: 2.4.5
       '@floeorg/vite-plugin':
-        specifier: 0.1.20
-        version: 0.1.20(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))
+        specifier: 0.1.24
+        version: 0.1.24(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.19(tailwindcss@4.2.2)
@@ -473,8 +473,8 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@floeorg/vite-plugin@0.1.20':
-    resolution: {integrity: sha512-eoDAiaOXI3ylqIu30ML6BIywD893BtSiF2zBMFZFy4WoeZNAjKkL0Sfdi+eMLnbltqmIxrbkSCTGaCiK97ALMQ==}
+  '@floeorg/vite-plugin@0.1.24':
+    resolution: {integrity: sha512-gzmGHe+WgpMpZq9pov0ZVV7YRV6HY7UsjhR4QM/nXTTQme0x/UulHKz827ZmsMgK3YcqDnXEFZGi/sms6ctpOA==}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
 
@@ -2089,7 +2089,7 @@ snapshots:
 
   '@exodus/bytes@1.15.0': {}
 
-  '@floeorg/vite-plugin@0.1.20(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))':
+  '@floeorg/vite-plugin@0.1.24(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0))':
     dependencies:
       vite: 7.3.1(@types/node@22.19.15)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)
 

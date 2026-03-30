@@ -45,10 +45,10 @@ export async fn getSession() -> Promise<Option<Session>> {
 }
 
 type Subscription {
-    unsubscribe: () => (),
+    unsubscribe: () -> (),
 }
 
-export fn onAuthStateChange(callback: (Option<Session>) => ()) -> Subscription {
+export fn onAuthStateChange(callback: (Option<Session>) -> ()) -> Subscription {
     const supabase = getSupabaseClient()
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
         callback(session)

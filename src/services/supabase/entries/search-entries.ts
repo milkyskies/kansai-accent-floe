@@ -1,4 +1,4 @@
-import { accentFromRow, type Entry, entryFromRow } from "#/models/entry.ts";
+import { accentFromRow, type Entry, entryFromRow } from "#/models/entry";
 import { getSupabaseClient } from "#/services/supabase/client";
 
 export async function searchEntries(query: string): Promise<Entry[]> {
