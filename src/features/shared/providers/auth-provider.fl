@@ -22,9 +22,7 @@ export fn AuthProvider(props: Props) -> JSX.Element {
 
     useEffect(() => {
         async fn init() {
-            const s = await getSession()
-
-            setSession(s)
+            await getSession() |> setSession
 
             setLoading(false)
         }
